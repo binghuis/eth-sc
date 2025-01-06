@@ -19,6 +19,10 @@
     "viem": "^2.22.2"
   },
   "scripts": {
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat ignition deploy ./ignition/modules/*.ts",
+    "node": "hardhat node"
   }
 }
