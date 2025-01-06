@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^0.15.9",
+    "@nomicfoundation/hardhat-ignition-viem": "^0.15.9",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.12",
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.12",
+    "@nomicfoundation/hardhat-viem": "^2.0.6",
+    "@types/chai": "^5.0.1",
+    "@types/chai-as-promised": "^8.0.1",
+    "@types/mocha": ">=10.0.10",
+    "@types/node": ">=22.10.5",
+    "chai": "^5.1.2",
+    "hardhat": "^2.22.17",
+    "hardhat-gas-reporter": "^2.2.2",
+    "solidity-coverage": "^0.8.14",
+    "ts-node": ">=10.9.2",
+    "typescript": "~5.7.2",
+    "viem": "^2.22.2"
+  },
+  "scripts": {
+    "prettier": "prettier --write ."
+  }
+}
