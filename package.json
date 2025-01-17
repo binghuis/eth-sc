@@ -13,16 +13,17 @@
     "chai": "^4.2.0",
     "hardhat": "^2.22.18",
     "hardhat-gas-reporter": "^1.0.8",
+    "prettier": "^3.4.2",
     "solidity-coverage": "^0.8.14",
     "ts-node": ">=10.9.2",
     "typescript": "~5.7.3",
     "viem": "^2.22.9"
   },
   "scripts": {
-    "prettier": "prettier --write .",
     "compile": "hardhat compile",
     "test": "hardhat test",
     "deploy": "hardhat ignition deploy ./ignition/modules/*.ts",
-    "node": "hardhat node"
+    "node": "hardhat node",
+    "prettier": "prettier --write ."
   }
 }
