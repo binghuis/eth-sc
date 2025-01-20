@@ -15,6 +15,7 @@
     "hardhat": "^2.22.18",
     "hardhat-gas-reporter": "^1.0.8",
     "prettier": "^3.4.2",
+    "solhint": "^5.0.5",
     "solidity-coverage": "^0.8.14",
     "ts-node": ">=10.9.2",
     "typescript": "~5.7.3",
@@ -24,7 +25,7 @@
     "compile": "hardhat compile",
     "clean": "hardhat clean",
     "test": "hardhat test",
-    "deploy": "hardhat ignition deploy ./ignition/modules/*.ts",
+    "ignite": "hardhat run scripts/ignite.ts",
     "node": "hardhat node",
     "prettier": "prettier --write ."
   }
