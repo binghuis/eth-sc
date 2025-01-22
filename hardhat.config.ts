@@ -1,5 +1,5 @@
 import type { HardhatUserConfig } from 'hardhat/config'
-import '@nomicfoundation/hardhat-toolbox-viem'
+import '@nomicfoundation/hardhat-ethers'
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -13,8 +13,7 @@ const config: HardhatUserConfig = {
   },
   networks: {
     hardhat: {}
-  },
-  gasReporter: {}
+  }
 }
 
 export default config

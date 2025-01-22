@@ -1,19 +1,16 @@
-import hre from 'hardhat'
-import ApolloModule from '../ignition/modules/Apollo'
-
-async function getRocketNameFromAPI() {
-  // Mock function to simulate an asynchronous API call
-  return 'Saturn VI'
-}
+import { ethers } from 'hardhat'
 
 async function main() {
-  const rocketName = await getRocketNameFromAPI()
-
-  const { apollo } = await hre.ignition.deploy(ApolloModule, {
-    parameters: { Apollo: { rocketName } }
-  })
-
-  console.log(`Apollo deployed to: ${apollo.address}`)
+  const Box = await ethers.getContractFactory('Box')
+  console.log('Deploying Box...')
+  const box = await Box.deploy()
+  await box.waitForDeployment()
+  console.log('Box deployed to:', await box.getAddress())
 }
 
-main().catch(console.error)
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error)
+    process.exit(1)
+  })
