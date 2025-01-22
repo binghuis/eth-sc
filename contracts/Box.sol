@@ -1,23 +1,31 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
 
-// Import Ownable from the OpenZeppelin Contracts library
 import '@openzeppelin/contracts/access/Ownable.sol';
+import '@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol';
 
-// Make Box inherit from the Ownable contract
-contract Box is Ownable {
+contract AdminBox is Initializable {
   uint256 private _value;
+  address private _admin;
 
+  // Emitted when the stored value changes
   event ValueChanged(uint256 value);
 
-  constructor() Ownable(msg.sender) {}
+  function initialize(address admin) public initializer {
+    _admin = admin;
+  }
 
-  // The onlyOwner modifier restricts who can call the store function
-  function store(uint256 value) public onlyOwner {
+  /// @custom:oz-upgrades-unsafe-allow constructor
+  constructor() initializer {}
+
+  // Stores a new value in the contract
+  function store(uint256 value) public {
+    require(msg.sender == _admin, 'AdminBox: not admin');
     _value = value;
     emit ValueChanged(value);
   }
 
+  // Reads the last stored value
   function retrieve() public view returns (uint256) {
     return _value;
   }
