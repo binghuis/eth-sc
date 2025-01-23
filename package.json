@@ -6,7 +6,8 @@
     "ignite": "hardhat run --network localhost scripts/ignite.ts",
     "console": "hardhat console --network localhost",
     "node": "hardhat node",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write --plugin=prettier-plugin-solidity 'contracts/**/*.sol'",
+    "lint": "prettier --list-different --plugin=prettier-plugin-solidity 'contracts/**/*.sol'"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.8",
@@ -16,7 +17,6 @@
     "@nomicfoundation/hardhat-network-helpers": "^1.0.12",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@nomicfoundation/hardhat-verify": "^2.0.12",
-    "@openzeppelin/contracts": "^5.2.0",
     "@openzeppelin/hardhat-upgrades": "^3.9.0",
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
@@ -28,6 +28,7 @@
     "hardhat": "^2.22.18",
     "hardhat-gas-reporter": "^1.0.8",
     "prettier": "^3.4.2",
+    "prettier-plugin-solidity": "^1.4.2",
     "solhint": "^5.0.5",
     "solidity-coverage": "^0.8.14",
     "ts-node": ">=10.9.2",
@@ -35,6 +36,7 @@
     "typescript": ">=5.7.3"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^5.2.0",
     "@openzeppelin/contracts-upgradeable": "^5.2.0"
   }
 }

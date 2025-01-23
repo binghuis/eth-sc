@@ -6,7 +6,6 @@
   "editor.lineNumbers": "interval",
   "editor.renderWhitespace": "boundary",
   "workbench.startupEditor": "newUntitledFile",
-
   // ========== Editor ==========
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
@@ -30,6 +29,7 @@
   "git.enableSmartCommit": true,
   "git.untrackedChanges": "separate",
   "scm.diffDecorationsGutterWidth": 2,
+  "prettier.documentSelectors": ["**/*.sol"],
   "search.exclude": {
     "**/*.snap": true,
     "**/*.svg": true,
@@ -60,7 +60,6 @@
   "editor.quickSuggestions": {
     "strings": "on"
   },
-
   // ESLint config: https://github.com/antfu/eslint-config
   "eslint.codeAction.showDocumentation": {
     "enable": true
