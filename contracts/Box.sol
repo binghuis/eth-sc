@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
 
-import '@openzeppelin/contracts/access/Ownable.sol';
-import '@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol';
+import {Initializable} from '@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol';
 
 contract AdminBox is Initializable {
   uint256 private _value;
+
   address private _admin;
 
   // Emitted when the stored value changes

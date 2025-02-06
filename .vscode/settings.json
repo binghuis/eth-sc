@@ -23,13 +23,16 @@
     "source.organizeImports": "never"
   },
   "editor.formatOnSave": true,
+  "[solidity]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.documentSelectors": ["**/*.sol"],
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.untrackedChanges": "separate",
   "scm.diffDecorationsGutterWidth": 2,
-  "prettier.documentSelectors": ["**/*.sol"],
   "search.exclude": {
     "**/*.snap": true,
     "**/*.svg": true,
