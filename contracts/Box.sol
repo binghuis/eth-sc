@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.28;
+pragma solidity ^0.8.24;
 
-import {Initializable} from '@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol';
+import {Initializable} from "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 contract AdminBox is Initializable {
   uint256 private _value;
@@ -20,7 +20,7 @@ contract AdminBox is Initializable {
 
   // Stores a new value in the contract
   function store(uint256 value) public {
-    require(msg.sender == _admin, 'AdminBox: not admin');
+    require(msg.sender == _admin, "AdminBox: not admin");
     _value = value;
     emit ValueChanged(value);
   }

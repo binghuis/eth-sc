@@ -1,10 +1,10 @@
-import type { HardhatUserConfig } from 'hardhat/config'
-import '@nomicfoundation/hardhat-ethers'
-import '@openzeppelin/hardhat-upgrades'
+import type { HardhatUserConfig } from "hardhat/config"
+import "@nomicfoundation/hardhat-ethers"
+import "@openzeppelin/hardhat-upgrades"
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: '0.8.28',
+    version: "0.8.24",
     settings: {
       optimizer: {
         enabled: true,
