@@ -1,6 +1,7 @@
 import type { HardhatUserConfig } from "hardhat/config"
 import "@nomicfoundation/hardhat-ethers"
 import "@openzeppelin/hardhat-upgrades"
+import "solidity-coverage"
 
 const config: HardhatUserConfig = {
   solidity: {

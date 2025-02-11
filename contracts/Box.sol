@@ -20,7 +20,6 @@ contract AdminBox is Initializable {
 
   // Stores a new value in the contract
   function store(uint256 value) public {
-    require(msg.sender == _admin, "AdminBox: not admin");
     _value = value;
     emit ValueChanged(value);
   }
