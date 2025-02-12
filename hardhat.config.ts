@@ -1,9 +1,10 @@
+import "./tasks/taskkk"
 import "@nomicfoundation/hardhat-ethers"
 import "@nomicfoundation/hardhat-ignition"
 import "@nomicfoundation/hardhat-verify"
 import "@openzeppelin/hardhat-upgrades"
 import "dotenv/config"
-import { type HardhatUserConfig } from "hardhat/config"
+import { HardhatUserConfig } from "hardhat/config"
 import "solidity-coverage"
 
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY ?? ""
