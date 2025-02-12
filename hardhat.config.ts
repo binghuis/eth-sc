@@ -1,10 +1,21 @@
 import { type HardhatUserConfig } from "hardhat/config"
+
 import "@nomicfoundation/hardhat-ethers"
 import "@nomicfoundation/hardhat-verify"
 import "@nomicfoundation/hardhat-ignition"
 import "@openzeppelin/hardhat-upgrades"
-import "solidity-coverage"
 import "dotenv/config"
+import "solidity-coverage"
+
+import { readdirSync } from "fs"
+import { join } from "path"
+
+// const tasksDir = join(__dirname, "tasks")
+// const taskFiles = readdirSync(tasksDir).filter((file) => file.endsWith(".ts"))
+
+// taskFiles.forEach(async (file) => {
+//   import(join(tasksDir, file)).catch((err) => console.error(`Failed to load task: ${file}`, err))
+// })
 
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY ?? ""
 const INFURA_API_KEY = process.env.INFURA_API_KEY ?? ""
