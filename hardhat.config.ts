@@ -1,8 +1,10 @@
 import "./tasks/taskkk"
+import "@nomicfoundation/hardhat-chai-matchers"
 import "@nomicfoundation/hardhat-ethers"
 import "@nomicfoundation/hardhat-ignition"
 import "@nomicfoundation/hardhat-verify"
 import "@openzeppelin/hardhat-upgrades"
+import "@typechain/hardhat"
 import "dotenv/config"
 import { HardhatUserConfig } from "hardhat/config"
 import "solidity-coverage"
@@ -20,6 +22,10 @@ const config: HardhatUserConfig = {
         runs: 200
       }
     }
+  },
+  typechain: {
+    outDir: "typechain",
+    target: "ethers-v6"
   },
   etherscan: {
     apiKey: ETHERSCAN_API_KEY
