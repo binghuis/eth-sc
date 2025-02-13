@@ -2,6 +2,7 @@ import "./tasks/taskkk"
 import "@nomicfoundation/hardhat-chai-matchers"
 import "@nomicfoundation/hardhat-ethers"
 import "@nomicfoundation/hardhat-ignition"
+import "@nomicfoundation/hardhat-ignition-ethers"
 import "@nomicfoundation/hardhat-verify"
 import "@openzeppelin/hardhat-upgrades"
 import "@typechain/hardhat"
@@ -31,10 +32,15 @@ const config: HardhatUserConfig = {
     apiKey: ETHERSCAN_API_KEY
   },
   networks: {
-    hardhat: {},
     sepolia: {
       url: `https://sepolia.infura.io/v3/${INFURA_API_KEY}`,
       accounts: [SEPOLIA_PRIVATE_KEY]
+    },
+    hardhat: {
+      forking: {
+        url: `https://mainnet.infura.io/v3/${INFURA_API_KEY}`,
+        httpHeaders: {}
+      }
     }
   }
 }
