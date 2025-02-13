@@ -1,12 +1,12 @@
 {
   "scripts": {
-    "compile": "hardhat compile",
-    "node": "hardhat node",
-    "ignite": "hardhat run --network sepolia --deployment-id sepolia-deployment scripts/ignite.ts",
-    "clean": "hardhat clean",
-    "test": "REPORT_GAS=true hardhat test",
-    "coverage": "hardhat coverage",
-    "console": "hardhat console --network localhost",
+    "compile": "hh compile",
+    "node": "hh node",
+    "ignite": "hh run --network sepolia --deployment-id sepolia-deployment scripts/ignite.ts",
+    "clean": "hh clean",
+    "test": "REPORT_GAS=true hh test",
+    "coverage": "hh coverage",
+    "console": "hh console --network localhost",
     "prettier": "prettier --write --plugin=prettier-plugin-solidity 'contracts/**/*.sol'",
     "lint": "prettier --list-different --plugin=prettier-plugin-solidity 'contracts/**/*.sol'"
   },
@@ -30,6 +30,7 @@
     "ethers": "^6",
     "hardhat": "^2.22.18",
     "hardhat-gas-reporter": "^1.0.8",
+    "hardhat-shorthand": "^1.0.0",
     "prettier": "^3.5.0",
     "prettier-plugin-solidity": "^1.4.2",
     "solhint": "^5.0.5",
@@ -42,5 +43,5 @@
     "@openzeppelin/contracts": "^5.2.0",
     "@openzeppelin/contracts-upgradeable": "^5.2.0"
   },
-  "packageManager": "pnpm@9.3.0+sha512.ee7b93e0c2bd11409c6424f92b866f31d3ea1bef5fbe47d3c7500cdc3c9668833d2e55681ad66df5b640c61fa9dc25d546efa54d76d7f8bf54b13614ac293631"
+  "packageManager": "pnpm@9.3.0"
 }
